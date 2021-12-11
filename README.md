@@ -1,17 +1,18 @@
 # Unix-course-Final-exercise
 
 # Prepare data directories
+
 cd ./projects
 mkdir project
 
-#download data
+# download data
 
 cp /data-shared/vcf_examples/luscinia_vars.vcf.gz . 
 
-#unzip
+# unzip
 gunzip luscinia_vars.vcf.gz   
 
-#choose only chromosomes and create «chr» with this data
+# choose only chromosomes and create «chr» with this data
 cut -f1 luscinia_vars.vcf |grep -v '^#' > chr 
 
 #choose only quality and create «qual» with this data
