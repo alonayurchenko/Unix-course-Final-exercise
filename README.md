@@ -5,6 +5,7 @@ cd ./projects
 mkdir project
 
 #download data
+
 cp /data-shared/vcf_examples/luscinia_vars.vcf.gz . 
 
 #unzip
