@@ -108,4 +108,4 @@ hist(subset(test, chr == "chrUn")$QUAL, xlab = "Quality_chrUn")
 hist(subset(test, chr == "chrZ")$QUAL, xlab = "Quality_chrZ")
 
 
-
+new_test <-subset(test, QUAL < 990)
