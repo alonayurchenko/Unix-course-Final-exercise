@@ -63,8 +63,13 @@
 **make bar plot for all chromosomes, separating them by color**
 >ggplot(test, aes(x = chr, fill = chr)) + geom_bar() 
 
+![plot](https://user-images.githubusercontent.com/95172471/145681471-3771380f-118d-4009-bc2c-14f50979e856.png)
+
 **make histogram for whole genome**
 >hist(test$QUAL, xlab = "Quality") 
+
+![Histogram](https://user-images.githubusercontent.com/95172471/145681466-c4571c5c-905f-40d9-9067-99e8f66cc0f6.png)
+
 
 **make histogram for all chromosomes**
 >hist(subset(test, chr == "chr1")$QUAL, xlab = "Quality_chr1")
@@ -143,7 +148,7 @@
 
 >hist(subset(test, chr == "chrZ")$QUAL, xlab = "Quality_chrZ")
 
-![plot](https://user-images.githubusercontent.com/95172471/145681471-3771380f-118d-4009-bc2c-14f50979e856.png)
 
 
-![Histogram](https://user-images.githubusercontent.com/95172471/145681466-c4571c5c-905f-40d9-9067-99e8f66cc0f6.png)
+
+
