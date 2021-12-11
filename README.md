@@ -69,9 +69,7 @@ hist(test$QUAL, xlab = "Quality")
 
 # make histogram for all chromosomes
 hist(subset(test, chr == "chr1")$QUAL, xlab = "Quality_chr1")
-
 hist(subset(test, chr == "chr1A")$QUAL, xlab = "Quality_chr1A")
-
 hist(subset(test, chr == "chr1B")$QUAL, xlab = "Quality_chr1B")
 hist(subset(test, chr == "chr10")$QUAL, xlab = "Quality_chr10")
 hist(subset(test, chr == "chr11")$QUAL, xlab = "Quality_chr11")
