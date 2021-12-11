@@ -143,5 +143,7 @@
 
 >hist(subset(test, chr == "chrZ")$QUAL, xlab = "Quality_chrZ")
 
+![plot](https://user-images.githubusercontent.com/95172471/145681471-3771380f-118d-4009-bc2c-14f50979e856.png)
 
-![This is an image](Unix-course-Final-exercise/Histogram.png)
+
+![Histogram](https://user-images.githubusercontent.com/95172471/145681466-c4571c5c-905f-40d9-9067-99e8f66cc0f6.png)
