@@ -22,7 +22,7 @@ cut -f6 luscinia_vars.vcf |grep -v '^#' > qual
 paste chr qual > test
 
 # Work in R studio
-#Choose directory and download test
+# Choose directory and download test
 setwd('/home/user10/projects/project')
 read_tsv('test') -> test
 
