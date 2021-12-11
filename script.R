@@ -34,7 +34,7 @@ test <- subset(test, (chr1 != "chr1_random") & (chr1 !="chr2_random") &
 names(test)[1] <- "chr"
 
 #make bar plot for all chromosomes, separating them by color 
-ggplot(test, aes(x = chr, fill = chr)) + geom_bar() 
+ggplot(test, aes(x = chr, fill = chr)) + geom_bar() + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
 
 #make histogram for whole genome
 hist(test$QUAL, xlab = "Quality") 
