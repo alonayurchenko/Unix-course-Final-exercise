@@ -67,7 +67,8 @@ theme(axis.title.x=element_blank(),
       axis.ticks.x=element_blank())
 
 
-![plot]
+![plot](https://user-images.githubusercontent.com/95172471/145685005-949eb623-2be8-4f4b-81fb-cb65363e8a26.png)
+
 
 **make histogram for whole genome**
 >hist(test$QUAL, xlab = "Quality") 
