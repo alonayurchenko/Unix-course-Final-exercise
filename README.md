@@ -15,27 +15,27 @@ gunzip luscinia_vars.vcf.gz
 # choose only chromosomes and create «chr» with this data
 cut -f1 luscinia_vars.vcf |grep -v '^#' > chr 
 
-#choose only quality and create «qual» with this data
+# choose only quality and create «qual» with this data
 cut -f6 luscinia_vars.vcf |grep -v '^#' > qual
 
-#create «test» with two columns (chromosomes and quality)
+# create «test» with two columns (chromosomes and quality)
 paste chr qual > test
 
-#Work in R studio
+# Work in R studio
 #Choose directory and download test
 setwd('/home/user10/projects/project')
 read_tsv('test') -> test
 
-#download library 
+# download library 
 library(tidyverse)
  
-#remuve data with 999
+# remuve data with 999
 test <-subset(test, QUAL < 998)
 
-#to remove incorrect chromosomes we need to find all possible variants
+# to remove incorrect chromosomes we need to find all possible variants
 uni <- unique(test[,1])
 
-#delete all «random» and «unmapped» data
+# delete all «random» and «unmapped» data
 test <- subset(test, (chr1 != "chr1_random") & (chr1 !="chr2_random") &
                     (chr1 != "chr10_random") & (chr1 != "chr11_random") &
                     (chr1 != "chr12_random") & (chr1 != "chr13_random") &
@@ -54,20 +54,20 @@ test <- subset(test, (chr1 != "chr1_random") & (chr1 !="chr2_random") &
                     (chr1 != "chrLGE22_random") & (chr1 != "chrUnmapped") &
                     (chr1 != "chrZ_random"))
 
-#rename first column 
+# rename first column 
 names(test)[1] <- "chr"
 
-#make bar plot for all chromosomes, separating them by color 
+# make bar plot for all chromosomes, separating them by color 
 ggplot(test, aes(x = chr, fill = chr)) + geom_bar() 
 
-#make bar plot for all chromosomes separately
+# make bar plot for all chromosomes separately
 gg <- ggplot(test, aes(x = chr, fill = chr)) + geom_bar()
 gg + facet_wrap(~chr)
 
-#make histogram for whole genome
+# make histogram for whole genome
 hist(test$QUAL, xlab = "Quality") 
 
-#make histogram for all chromosomes
+# make histogram for all chromosomes
 hist(subset(test, chr == "chr1")$QUAL, xlab = "Quality_chr1")
 hist(subset(test, chr == "chr1A")$QUAL, xlab = "Quality_chr1A")
 hist(subset(test, chr == "chr1B")$QUAL, xlab = "Quality_chr1B")
