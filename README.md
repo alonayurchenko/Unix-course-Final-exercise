@@ -144,4 +144,4 @@
 >hist(subset(test, chr == "chrZ")$QUAL, xlab = "Quality_chrZ")
 
 
-![This is an image](~/Users/alenaurcenko/Desktop/Rplot01.pdf)
+![This is an image](Unix-course-Final-exercise/Histogram.png)
