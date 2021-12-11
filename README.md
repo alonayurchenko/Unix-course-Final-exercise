@@ -63,11 +63,6 @@
 **make bar plot for all chromosomes, separating them by color**
 >ggplot(test, aes(x = chr, fill = chr)) + geom_bar() 
 
-**make bar plot for all chromosomes separately**
->gg <- ggplot(test, aes(x = chr, fill = chr)) + geom_bar()
-
->gg + facet_wrap(~chr)
-
 **make histogram for whole genome**
 >hist(test$QUAL, xlab = "Quality") 
 
