@@ -61,7 +61,11 @@
 >names(test)[1] <- "chr"
 
 **make bar plot for all chromosomes, separating them by color**
->ggplot(test, aes(x = chr, fill = chr)) + geom_bar() 
+>ggplot(new_test1, aes(x = chr, fill = chr)) + geom_bar() +
+theme(axis.title.x=element_blank(),
+      axis.text.x=element_blank(),
+      axis.ticks.x=element_blank())
+
 
 ![plot]
 
