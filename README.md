@@ -69,12 +69,14 @@ theme(axis.title.x=element_blank(),
 
 ![plot](https://user-images.githubusercontent.com/95172471/145685005-949eb623-2be8-4f4b-81fb-cb65363e8a26.png)
 
+*We can see that the highest quality (general count of parameter "quality" is more than 30 000) is for chromosomes 1, 2 and 3. Such chromsomes as 1B, 16, 25, LG2, LG5, LGE22 and M have general count less than 500.*
 
 **make histogram for whole genome**
 >hist(test$QUAL, xlab = "Quality") 
 
 ![Histogram](https://user-images.githubusercontent.com/95172471/145681466-c4571c5c-905f-40d9-9067-99e8f66cc0f6.png)
 
+*The maximal frequency of parameter "quality" in all samples is between 0 and 20. For chromosome 16, which has small general count of quality, there are another distribution – the biggest peak is between 20-40, but there is also another peak after 140.*
 
 **make histogram for all chromosomes**
 >hist(subset(test, chr == "chr1")$QUAL, xlab = "Quality_chr1")
