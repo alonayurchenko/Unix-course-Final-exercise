@@ -6,6 +6,7 @@
 
 >mkdir project
 
+>cd ./project
 
 **download data**
 
