@@ -32,10 +32,10 @@
 **download library**
 >library(tidyverse)
  
-**remuve data with 999**
+**remuve data with 999, because it is wrong data **
 >test <-subset(test, QUAL < 998)
 
-**to remove incorrect chromosomes we need to find all possible variants**
+**to remove incorrect chromosomes we need to find all possible variants before**
 >uni <- unique(test[,1])
 
 **delete all «random» and «unmapped» data**
