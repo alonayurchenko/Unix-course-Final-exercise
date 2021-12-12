@@ -28,11 +28,8 @@
 >setwd('/home/user10/projects/project')
 
 >read_tsv('test') -> test
-
-**download library**
->library(tidyverse)
  
-**remuve data with 999, because it is wrong data **
+**remuve data with 999, because it is wrong data**
 >test <-subset(test, QUAL < 998)
 
 **to remove incorrect chromosomes we need to find all possible variants before**
