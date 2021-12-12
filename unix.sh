@@ -1,7 +1,7 @@
 # Prepare data directories
 cd ./projects
 mkdir project
-
+cd ./project
 #download data
 cp /data-shared/vcf_examples/luscinia_vars.vcf.gz . 
 
